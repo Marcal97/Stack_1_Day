@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: PRD_Ex_employees_days_on_contract
+    description: Production table that shows how long ex employees have worked for the company.
+    columns: 
+      - name: ID
+        description: The ID that identifies an employee.
+        tests:
+          - not_null
+          - unique
+
+      - name: Days_Working
+        description: The amount of days he worked for the company.
+
+      - name: Start_Date
+        description: When an employee started working for the company.
+      
+      - name: End_Date
+        description: When an employee stopped working for the company (9999 if still working).
+            

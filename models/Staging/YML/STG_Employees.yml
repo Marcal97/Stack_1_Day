@@ -1,0 +1,27 @@
+version: 2
+
+models:
+  - name: STG_Employees
+    description: Staged table for the employees.
+    columns: 
+      - name: ID
+        description: The ID that identifies each employee.
+        tests:
+          - not_null
+          - unique
+
+      - name: First_Name
+        description: The first name of each employee.
+
+      - name: Last_Name
+        description: The last name of each employee.
+
+      - name: Team
+        description: The team to which each employee belongs to.
+
+      - name: Start_Date
+        description: When an employee started working for the company.
+      
+      - name: End_Date
+        description: When an employee stopped working for the company (9999 if still working).
+            

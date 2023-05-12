@@ -1,0 +1,29 @@
+version: 2
+
+models:
+  - name: STG_Customers
+    description: Staged table for the customers.
+    columns: 
+      - name: Customer_ID
+        description: The ID that identifies each customer.
+        tests:
+          - not_null
+          - unique
+
+      - name: Customer_Name
+        description: The customer code of each customer.
+
+      - name: Market_Segment
+        description: The market segment to which a customer belongs to.
+
+      - name: Phone_Number
+        description: The phone number of each customer.
+
+      - name: Account_Balance
+        description: The account balance of each customer.
+      
+      - name: Nation
+        description: The nation of each customer.
+
+      - name: Region
+        description: The region of each customer.

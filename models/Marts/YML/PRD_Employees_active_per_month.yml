@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: PRD_Employees_active_per_month
+    description: Production table that shows how many employees were working for the company each month of each year.
+    columns: 
+      - name: Month
+        description: The month.
+
+      - name: Year
+        description: The year.
+
+      - name: Active_Contracts
+        description: The number of employees working.
+            

@@ -37,3 +37,9 @@ models:
     Staging:
       materialized: table
       transient: false
+    Facts:
+      materialized: table
+      transient: false
+    Marts:
+      materialized: table
+      transient: false

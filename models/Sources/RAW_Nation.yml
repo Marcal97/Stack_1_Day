@@ -1,0 +1,109 @@
+version: 2
+
+sources:
+  - name: Nation_Information
+    description: Schema containing general infos on nations and regions
+    database: RAW_DB  
+    schema: KP__Schema2
+    tables:
+      - name: Nation
+        description: Nations information.
+        columns:
+          - name: _FIVETRAN_ID
+            description: A row that identifies the ID that fivetran assignes to a customer record.
+            tests:
+              - not_null
+              - unique
+
+          - name: N_Name
+            description: Nation name.
+            tests:
+              - not_null
+              - unique
+
+          - name: N_Regionkey
+            description: An integer that identifies in which region a nation is.
+            tests:
+              - accepted_values:
+                  values:
+                    - 1
+                    - 2
+                    - 3
+                    - 4
+                    - 5
+
+          - name: N_Comment
+            description: Useless comment.
+            
+          - name: N_Nationkey
+            description: The PRIMARY KEY that states which ID a nation has.
+            tests:
+              - accepted_values:
+                  values:
+                    - 1
+                    - 2
+                    - 3
+                    - 4
+                    - 5
+                    - 6
+                    - 7
+                    - 8
+                    - 9
+                    - 10
+                    - 11
+                    - 12
+                    - 13
+                    - 14
+                    - 15
+                    - 16
+                    - 17
+                    - 18
+                    - 19
+                    - 20
+                    - 21
+                    - 22
+                    - 23
+                    - 24
+                    - 25
+
+          - name: _FIVETRAN_DELETED
+            description: Boolean to state whether the record was deleted through Fivetran during the connection.
+          
+          - name: _FIVETRAN_SYNCED
+            description: Timestamp to state last sync through Fivetran during.
+
+
+      - name: Region
+        description: Regions information.
+        columns:
+          - name: _FIVETRAN_ID
+            description: A row that identifies the ID that fivetran assignes to a customer record.
+            tests:
+              - not_null
+              - unique
+
+          - name: R_Regionkey
+            description: The PRIMARY KEY that identifies the ID of a region.
+            tests:
+              - accepted_values:
+                  values:
+                    - 1
+                    - 2
+                    - 3
+                    - 4
+                    - 5
+
+          - name: R_Comment
+            description: Useless comment.
+            
+          - name: R_Name
+            description: Region name.
+            tests:
+              - not_null
+              - unique
+
+          - name: _FIVETRAN_DELETED
+            description: Boolean to state whether the record was deleted through Fivetran during the connection.
+          
+          - name: _FIVETRAN_SYNCED
+            description: Timestamp to state last sync through Fivetran during.

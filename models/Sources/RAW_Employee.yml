@@ -1,0 +1,61 @@
+version: 2
+
+sources:
+  - name: Employee_Information
+    description: Schema containing the raw data from Snowflake on employees
+    database: RAW_DB
+    schema: Storage
+    tables:
+      - name: Employees_Info
+        description: Raw employees information data.
+        columns:
+          - name: ID
+            description: A row that uniquely identifies an employee.
+            tests:
+              - not_null
+              - unique
+
+          - name: First_Name
+            description: The first name of an employee.
+            tests:
+              - not_null
+        
+          - name: Last_Name
+            description: The last name of an employee.
+            tests:
+              - not_null
+
+      - name: Employees
+        description: Raw data on team and hiring/firing date of each employee.
+        columns:
+          - name: Employee_ID
+            description: A row that identifies the employee row number
+            tests:
+              - not_null
+              - unique
+
+          - name: Date1
+            description: Hiring date.
+            tests:
+              - not_null
+          
+          - name: Date2
+            description: End of contract
+            tests:
+              - not_null
+
+          - name: Team
+            description: Integer that states to which team an employee belongs to.
+            tests:
+            - accepted_values:
+                  values:
+                    - 1
+                    - 2
+                    - 3
+                    - 4
+                    - 5
+                    - 6
+                    - 7
+                    - 8
+                    - 9 
+                    - 10

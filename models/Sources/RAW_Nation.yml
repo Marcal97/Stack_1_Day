@@ -26,11 +26,11 @@ sources:
             tests:
               - accepted_values:
                   values:
+                    - 0
                     - 1
                     - 2
                     - 3
                     - 4
-                    - 5
 
           - name: N_Comment
             description: Useless comment.
@@ -64,7 +64,7 @@ sources:
                     - 22
                     - 23
                     - 24
-                    - 25
+                    - 0
 
           - name: _FIVETRAN_DELETED
             description: Boolean to state whether the record was deleted through Fivetran during the connection.
@@ -87,11 +87,11 @@ sources:
             tests:
               - accepted_values:
                   values:
+                    - 0
                     - 1
                     - 2
                     - 3
                     - 4
-                    - 5
 
           - name: R_Comment
             description: Useless comment.

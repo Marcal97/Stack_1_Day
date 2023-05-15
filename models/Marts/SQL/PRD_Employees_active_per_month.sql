@@ -7,7 +7,7 @@ Source1 AS (
 
 Source2 AS (
     SELECT *
-    FROM {{ ref('FCT_Intermediate_Table') }}
+    FROM {{ ref('FCT_Dates') }}
 )
 
 SELECT Source2.Month                                          AS Month

@@ -1,4 +1,7 @@
-{{ config(materialized='table') }}
+{{ config( schema = 'Intermediate_Tables'
+         , materialized = 'table'
+         , transient = 'false'
+) }}
 
 WITH
 

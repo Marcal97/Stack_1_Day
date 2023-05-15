@@ -1,3 +1,8 @@
+{{ config( schema = 'Customers'
+         , materialized = 'table'
+         , transient = 'false'
+) }}
+
 WITH 
 
 Source1 AS (

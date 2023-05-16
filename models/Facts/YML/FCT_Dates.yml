@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: FCT_Intermediate_Table
+  - name: FCT_Dates
     description: Table that helps calculating the week, month, quarter and year of each date. From the oldest date in the dataset to the current date.
     columns: 
       - name: Date_ID

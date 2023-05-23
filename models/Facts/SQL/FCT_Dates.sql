@@ -25,4 +25,3 @@ Date_Dim AS (
 )
 
 SELECT * FROM Date_Dim
---comment
